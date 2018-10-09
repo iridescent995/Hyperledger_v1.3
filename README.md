@@ -11,3 +11,6 @@ generate genesis block for orderer
 ```
 ../bin/configtxgen -profile OneOrgOrdererGenesis -outputBlock ./config/genesis.block
 ```
+
+generate channel configuration transaction
+../bin/configtxgen -profile OneOrgChannel -outputCreateChannelTx ./config/channel.tx -channelID $CHANNEL_NAME
