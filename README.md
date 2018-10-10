@@ -51,5 +51,5 @@ peer chaincode install -n mycc -v 1.0 -l java -p /opt/gopath/src/github.com/chai
 
 instantiate cc
 ```
-peer chaincode instantiate -o orderer.market.com:7050 --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/market.com/orderers/orderer.market.com/msp/tlscacerts/tlsca.market.com-cert.pem -C channel -n mycc -v 1.0 -c '{"Args":["init","a", "100", "b","200"]}' -P "OR ('SellerMSP.peer')"
+peer chaincode instantiate -o orderer.market.com:7050 --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/market.com/orderers/orderer.market.com/msp/tlscacerts/tlsca.market.com-cert.pem -C channel -n mycc -l java -v 1.0 -c '{"Args":["init","a", "100", "b","200"]}' -P "OR ('SellerMSP.peer')"
 ```
