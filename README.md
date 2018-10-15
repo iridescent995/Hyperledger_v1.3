@@ -13,13 +13,13 @@ generate genesis block for orderer
 ```
 
 generate channel configuration transaction
-
+```
 ../bin/configtxgen -profile OneOrgChannel -outputCreateChannelTx ./config/channel.tx -channelID channel
-
+```
 generate anchor peer transaction
-
+```
 ../bin/configtxgen -profile OneOrgChannel -outputAnchorPeersUpdate ./config/SellerMSPanchors.tx -channelID channel -asOrg SellerMSP
-
+```
 bring up network
 ```
 docker-compose -f docker-compose.yml down
