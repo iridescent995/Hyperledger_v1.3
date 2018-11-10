@@ -39,6 +39,8 @@ Join peer1.org1.example.com to the channel.
 docker exec -e "CORE_PEER_LOCALMSPID=SellerMSP" -e "CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/msp/users/Admin@Seller.market.com/msp" peer1.Seller.market.com peer channel join -b channel.block
 ```
 
+### CLI commands
+
 login to cli
 ```
 docker exec -it cli bash
